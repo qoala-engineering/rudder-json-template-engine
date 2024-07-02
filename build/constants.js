@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EMPTY_EXPR = exports.INDENTATION_SPACES = exports.FUNCTION_RESULT_KEY = exports.RESULT_KEY = exports.BINDINGS_CONTEXT_KEY = exports.BINDINGS_PARAM_KEY = exports.DATA_PARAM_KEY = exports.VARS_PREFIX = void 0;
+const types_1 = require("./types");
+exports.VARS_PREFIX = '___';
+exports.DATA_PARAM_KEY = '___d';
+exports.BINDINGS_PARAM_KEY = '___b';
+exports.BINDINGS_CONTEXT_KEY = '___b.context.';
+exports.RESULT_KEY = '___r';
+exports.FUNCTION_RESULT_KEY = '___f';
+exports.INDENTATION_SPACES = 4;
+exports.EMPTY_EXPR = { type: types_1.SyntaxType.EMPTY };

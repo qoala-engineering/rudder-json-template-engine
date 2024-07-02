@@ -1,0 +1,47 @@
+import { ArrayExpression, ArrayFilterExpression, AssignmentExpression, BinaryExpression, BlockExpression, ConditionalExpression, DefinitionExpression, EngineOptions, Expression, FunctionCallExpression, FunctionExpression, IncrementExpression, IndexFilterExpression, LambdaArgExpression, LiteralExpression, LoopControlExpression, LoopExpression, ObjectExpression, ObjectFilterExpression, ObjectPropExpression, PathExpression, PathOptions, PathType, RangeFilterExpression, ReturnExpression, SelectorExpression, SpreadExpression, StatementsExpression, ThrowExpression, UnaryExpression } from './types';
+export declare class JsonTemplateReverseTranslator {
+    private options?;
+    private level;
+    constructor(options?: EngineOptions);
+    translate(expr: Expression): string;
+    translateExpression(expr: Expression): string;
+    translateArrayFilterExpression(expr: ArrayFilterExpression): string;
+    translateRangeFilterExpression(expr: RangeFilterExpression): string;
+    translateArrayIndexFilterExpression(expr: IndexFilterExpression): string;
+    translateObjectIndexFilterExpression(expr: IndexFilterExpression): string;
+    translateSelectorExpression(expr: SelectorExpression): string;
+    translateWithWrapper(expr: Expression, prefix: string, suffix: string): string;
+    translateObjectFilterExpression(expr: ObjectFilterExpression): string;
+    translateLambdaArgExpression(expr: LambdaArgExpression): string;
+    translateLoopControlExpression(expr: LoopControlExpression): string;
+    translateLoopExpression(expr: LoopExpression): string;
+    translateReturnExpression(expr: ReturnExpression): string;
+    translateThrowExpression(expr: ThrowExpression): string;
+    translateExpressions(exprs: Expression[], sep: string, prefix?: string): string;
+    translateLambdaFunctionExpression(expr: FunctionExpression): string;
+    translateRegularFunctionExpression(expr: FunctionExpression): string;
+    translateFunctionExpression(expr: FunctionExpression): string;
+    translateFunctionCallExpression(expr: FunctionCallExpression): string;
+    translateAssignmentExpression(expr: AssignmentExpression): string;
+    translateDefinitionExpression(expr: DefinitionExpression): string;
+    translateConditionalExpressionBody(expr: Expression): string;
+    translateConditionalExpression(expr: ConditionalExpression): string;
+    translatePathType(pathType: PathType): string;
+    translatePathRootString(root: string, pathType: PathType): string;
+    translatePathRoot(expr: PathExpression, pathType: PathType): string;
+    translatePathOptions(options?: PathOptions): string;
+    translatePathParts(parts: Expression[]): string;
+    translatePathExpression(expr: PathExpression): string;
+    translateIncrementExpression(expr: IncrementExpression): string;
+    translateUnaryExpression(expr: UnaryExpression): string;
+    translateBlockExpression(expr: BlockExpression): string;
+    translateSpreadExpression(expr: SpreadExpression): string;
+    getIndentation(): string;
+    translateObjectExpression(expr: ObjectExpression): string;
+    translateObjectPropExpression(expr: ObjectPropExpression): string;
+    translateArrayExpression(expr: ArrayExpression): string;
+    translateLiteralExpression(expr: LiteralExpression): string;
+    translateStatementsExpression(expr: StatementsExpression): string;
+    translateBinaryExpression(expr: BinaryExpression): string;
+}
+//# sourceMappingURL=reverse_translator.d.ts.map
