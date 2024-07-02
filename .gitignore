@@ -131,7 +131,7 @@ dist
 .pnp.*
 
 # build files
-build/
+# build/
 
 # stryker temp files
 .stryker-tmp
