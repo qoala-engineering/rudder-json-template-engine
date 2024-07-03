@@ -1,6 +1,6 @@
-var d = /* @__PURE__ */ ((i) => (i.FUNCTION = "function", i.NEW = "new", i.TYPEOF = "typeof", i.LET = "let", i.CONST = "const", i.LAMBDA = "lambda", i.AWAIT = "await", i.ASYNC = "async", i.IN = "in", i.NOT_IN = "nin", i.NOT = "not", i.CONTAINS = "contains", i.SUBSETOF = "subsetof", i.ANYOF = "anyof", i.NONEOF = "noneof", i.EMPTY = "empty", i.SIZE = "size", i.RETURN = "return", i.THROW = "throw", i.CONTINUE = "continue", i.BREAK = "break", i.FOR = "for", i))(d || {}), p = /* @__PURE__ */ ((i) => (i.UNKNOWN = "unknown", i.ID = "id", i.INT = "int", i.FLOAT = "float", i.STR = "str", i.BOOL = "bool", i.NULL = "null", i.UNDEFINED = "undefined", i.LAMBDA_ARG = "lambda_arg", i.PUNCT = "punct", i.THROW = "throw", i.KEYWORD = "keyword", i.EOT = "eot", i.REGEXP = "regexp", i))(p || {}), l = /* @__PURE__ */ ((i) => (i.BASE = "base", i.CONDITIONAL = "conditional", i.ASSIGNMENT = "assignment", i.COALESCING = "coalescing", i.OR = "or", i.AND = "and", i.EQUALITY = "equality", i.RELATIONAL = "relational", i.SHIFT = "shift", i.ADDITION = "addition", i.MULTIPLICATION = "multiplication", i.POWER = "power", i.UNARY = "unary", i.PREFIX_INCREMENT = "prefix_increment", i.POSTFIX_INCREMENT = "postfix_increment", i))(l || {}), n = /* @__PURE__ */ ((i) => (i.EMPTY = "empty", i.PATH = "path", i.PATH_OPTIONS = "path_options", i.SELECTOR = "selector", i.LAMBDA_ARG = "lambda_arg", i.INCREMENT = "increment", i.LITERAL = "literal", i.LOGICAL_COALESCE_EXPR = "logical_coalesce_expr", i.LOGICAL_OR_EXPR = "logical_or_expr", i.LOGICAL_AND_EXPR = "logical_and_expr", i.COMPARISON_EXPR = "comparison_expr", i.IN_EXPR = "in_expr", i.MATH_EXPR = "math_expr", i.UNARY_EXPR = "unary_expr", i.SPREAD_EXPR = "spread_expr", i.CONDITIONAL_EXPR = "conditional_expr", i.ARRAY_INDEX_FILTER_EXPR = "array_index_filter_expr", i.ALL_FILTER_EXPR = "all_filter_expr", i.OBJECT_INDEX_FILTER_EXPR = "object_index_filter_expr", i.RANGE_FILTER_EXPR = "range_filter_expr", i.OBJECT_FILTER_EXPR = "object_filter_expr", i.ARRAY_FILTER_EXPR = "array_filter_expr", i.DEFINITION_EXPR = "definition_expr", i.ASSIGNMENT_EXPR = "assignment_expr", i.OBJECT_PROP_EXPR = "object_prop_expr", i.OBJECT_EXPR = "object_expr", i.ARRAY_EXPR = "array_expr", i.BLOCK_EXPR = "block_expr", i.FUNCTION_EXPR = "function_expr", i.FUNCTION_CALL_EXPR = "function_call_expr", i.RETURN_EXPR = "return_expr", i.THROW_EXPR = "throw_expr", i.STATEMENTS_EXPR = "statements_expr", i.LOOP_CONTROL_EXPR = "loop_control_expr", i.LOOP_EXPR = "loop_expr", i))(n || {}), f = /* @__PURE__ */ ((i) => (i.SIMPLE = "simple", i.RICH = "rich", i.JSON = "json", i.UNKNOWN = "unknown", i))(f || {});
+var f = /* @__PURE__ */ ((i) => (i.FUNCTION = "function", i.NEW = "new", i.TYPEOF = "typeof", i.LET = "let", i.CONST = "const", i.LAMBDA = "lambda", i.AWAIT = "await", i.ASYNC = "async", i.IN = "in", i.NOT_IN = "nin", i.NOT = "not", i.CONTAINS = "contains", i.SUBSETOF = "subsetof", i.ANYOF = "anyof", i.NONEOF = "noneof", i.EMPTY = "empty", i.SIZE = "size", i.RETURN = "return", i.THROW = "throw", i.CONTINUE = "continue", i.BREAK = "break", i.FOR = "for", i))(f || {}), p = /* @__PURE__ */ ((i) => (i.UNKNOWN = "unknown", i.ID = "id", i.INT = "int", i.FLOAT = "float", i.STR = "str", i.BOOL = "bool", i.NULL = "null", i.UNDEFINED = "undefined", i.LAMBDA_ARG = "lambda_arg", i.PUNCT = "punct", i.THROW = "throw", i.KEYWORD = "keyword", i.EOT = "eot", i.REGEXP = "regexp", i))(p || {}), l = /* @__PURE__ */ ((i) => (i.BASE = "base", i.CONDITIONAL = "conditional", i.ASSIGNMENT = "assignment", i.COALESCING = "coalescing", i.OR = "or", i.AND = "and", i.EQUALITY = "equality", i.RELATIONAL = "relational", i.SHIFT = "shift", i.ADDITION = "addition", i.MULTIPLICATION = "multiplication", i.POWER = "power", i.UNARY = "unary", i.PREFIX_INCREMENT = "prefix_increment", i.POSTFIX_INCREMENT = "postfix_increment", i))(l || {}), n = /* @__PURE__ */ ((i) => (i.EMPTY = "empty", i.PATH = "path", i.PATH_OPTIONS = "path_options", i.SELECTOR = "selector", i.LAMBDA_ARG = "lambda_arg", i.INCREMENT = "increment", i.LITERAL = "literal", i.LOGICAL_COALESCE_EXPR = "logical_coalesce_expr", i.LOGICAL_OR_EXPR = "logical_or_expr", i.LOGICAL_AND_EXPR = "logical_and_expr", i.COMPARISON_EXPR = "comparison_expr", i.IN_EXPR = "in_expr", i.MATH_EXPR = "math_expr", i.UNARY_EXPR = "unary_expr", i.SPREAD_EXPR = "spread_expr", i.CONDITIONAL_EXPR = "conditional_expr", i.ARRAY_INDEX_FILTER_EXPR = "array_index_filter_expr", i.ALL_FILTER_EXPR = "all_filter_expr", i.OBJECT_INDEX_FILTER_EXPR = "object_index_filter_expr", i.RANGE_FILTER_EXPR = "range_filter_expr", i.OBJECT_FILTER_EXPR = "object_filter_expr", i.ARRAY_FILTER_EXPR = "array_filter_expr", i.DEFINITION_EXPR = "definition_expr", i.ASSIGNMENT_EXPR = "assignment_expr", i.OBJECT_PROP_EXPR = "object_prop_expr", i.OBJECT_EXPR = "object_expr", i.ARRAY_EXPR = "array_expr", i.BLOCK_EXPR = "block_expr", i.FUNCTION_EXPR = "function_expr", i.FUNCTION_CALL_EXPR = "function_call_expr", i.RETURN_EXPR = "return_expr", i.THROW_EXPR = "throw_expr", i.STATEMENTS_EXPR = "statements_expr", i.LOOP_CONTROL_EXPR = "loop_control_expr", i.LOOP_EXPR = "loop_expr", i))(n || {}), d = /* @__PURE__ */ ((i) => (i.SIMPLE = "simple", i.RICH = "rich", i.JSON = "json", i.UNKNOWN = "unknown", i))(d || {});
 const A = "___", I = "___d", O = "___b", J = "___b.context.", tt = "___r", et = "___f", rt = 4, X = { type: n.EMPTY };
-class _ extends Error {
+class $ extends Error {
   constructor(t, e, r) {
     super(`${t}. Input: ${e}, Output: ${r}`), this.inputMapping = e, this.outputMapping = r;
   }
@@ -102,7 +102,7 @@ class y {
     return this.matchTokenType(p.EOT);
   }
   static isOperator(t) {
-    return Object.values(d).some((e) => e.toString() === t);
+    return Object.values(f).some((e) => e.toString() === t);
   }
   matchKeyword() {
     return this.matchTokenType(p.KEYWORD);
@@ -112,43 +112,43 @@ class y {
     return e.type === p.KEYWORD && e.value === t;
   }
   matchContains() {
-    return this.matchKeywordValue(d.CONTAINS);
+    return this.matchKeywordValue(f.CONTAINS);
   }
   matchEmpty() {
-    return this.matchKeywordValue(d.EMPTY);
+    return this.matchKeywordValue(f.EMPTY);
   }
   matchSize() {
-    return this.matchKeywordValue(d.SIZE);
+    return this.matchKeywordValue(f.SIZE);
   }
   matchSubsetOf() {
-    return this.matchKeywordValue(d.SUBSETOF);
+    return this.matchKeywordValue(f.SUBSETOF);
   }
   matchAnyOf() {
-    return this.matchKeywordValue(d.ANYOF);
+    return this.matchKeywordValue(f.ANYOF);
   }
   matchNoneOf() {
-    return this.matchKeywordValue(d.NONEOF);
+    return this.matchKeywordValue(f.NONEOF);
   }
   matchIN() {
-    return this.matchKeywordValue(d.IN);
+    return this.matchKeywordValue(f.IN);
   }
   matchNotIN() {
-    return this.matchKeywordValue(d.NOT_IN);
+    return this.matchKeywordValue(f.NOT_IN);
   }
   matchFunction() {
-    return this.matchKeywordValue(d.FUNCTION);
+    return this.matchKeywordValue(f.FUNCTION);
   }
   matchNew() {
-    return this.matchKeywordValue(d.NEW);
+    return this.matchKeywordValue(f.NEW);
   }
   matchTypeOf() {
-    return this.matchKeywordValue(d.TYPEOF);
+    return this.matchKeywordValue(f.TYPEOF);
   }
   matchAwait() {
-    return this.matchKeywordValue(d.AWAIT);
+    return this.matchKeywordValue(f.AWAIT);
   }
   matchLambda() {
-    return this.matchKeywordValue(d.LAMBDA);
+    return this.matchKeywordValue(f.LAMBDA);
   }
   expect(t) {
     const e = this.lex();
@@ -567,7 +567,7 @@ class R {
         throw new m("Invalid assignment path");
       if (!R.isSimplePath(t))
         throw new m("Invalid assignment path");
-      return r.inferredPathType = f.SIMPLE, {
+      return r.inferredPathType = d.SIMPLE, {
         type: n.ASSIGNMENT_EXPR,
         value: this.parseBaseExpr(),
         op: e,
@@ -674,7 +674,7 @@ class R {
       return this.lexer.value();
     const s = {
       "^": I,
-      $: t.inferredPathType === f.JSON ? I : O,
+      $: t.inferredPathType === d.JSON ? I : O,
       "@": void 0
     };
     if (Object.prototype.hasOwnProperty.call(s, r.value))
@@ -683,8 +683,8 @@ class R {
   getInferredPathType() {
     var t;
     return this.pathTypesStack.length > 0 ? this.pathTypesStack[this.pathTypesStack.length - 1] : {
-      pathType: f.UNKNOWN,
-      inferredPathType: ((t = this.options) == null ? void 0 : t.defaultPathType) ?? f.RICH
+      pathType: d.UNKNOWN,
+      inferredPathType: ((t = this.options) == null ? void 0 : t.defaultPathType) ?? d.RICH
     };
   }
   createPathResult(t) {
@@ -694,7 +694,7 @@ class R {
     };
   }
   parsePathType() {
-    return this.lexer.matchSimplePath() ? (this.lexer.ignoreTokens(1), this.createPathResult(f.SIMPLE)) : this.lexer.matchRichPath() ? (this.lexer.ignoreTokens(1), this.createPathResult(f.RICH)) : this.lexer.matchJsonPath() ? (this.lexer.ignoreTokens(1), this.createPathResult(f.JSON)) : this.getInferredPathType();
+    return this.lexer.matchSimplePath() ? (this.lexer.ignoreTokens(1), this.createPathResult(d.SIMPLE)) : this.lexer.matchRichPath() ? (this.lexer.ignoreTokens(1), this.createPathResult(d.RICH)) : this.lexer.matchJsonPath() ? (this.lexer.ignoreTokens(1), this.createPathResult(d.JSON)) : this.getInferredPathType();
   }
   parsePathTypeExpr() {
     const t = this.parsePathType();
@@ -709,7 +709,7 @@ class R {
       parts: this.parsePathParts(),
       ...e
     };
-    return r.parts.length ? this.updatePathExpr(r) : R.setPathTypeIfNotJSON(r, f.SIMPLE);
+    return r.parts.length ? this.updatePathExpr(r) : R.setPathTypeIfNotJSON(r, d.SIMPLE);
   }
   static createArrayIndexFilterExpr(t) {
     return {
@@ -926,7 +926,7 @@ class R {
   parseInExpr(t) {
     return this.lexer.ignoreTokens(1), {
       type: n.IN_EXPR,
-      op: d.IN,
+      op: f.IN,
       args: [t, this.parseRelationalExpr()]
     };
   }
@@ -945,7 +945,7 @@ class R {
       op: "!",
       arg: v({
         type: n.COMPARISON_EXPR,
-        op: d.ANYOF,
+        op: f.ANYOF,
         args: [t, this.parseRelationalExpr()]
       })
     }) : t;
@@ -1277,22 +1277,22 @@ class R {
   }
   parseKeywordBasedExpr() {
     switch (this.lexer.lookahead().value) {
-      case d.NEW:
+      case f.NEW:
         return this.parseFunctionCallExpr();
-      case d.LAMBDA:
+      case f.LAMBDA:
         return this.parseLambdaExpr();
-      case d.ASYNC:
+      case f.ASYNC:
         return this.parseAsyncFunctionExpr();
-      case d.RETURN:
+      case f.RETURN:
         return this.parseReturnExpr();
-      case d.THROW:
+      case f.THROW:
         return this.parseThrowExpr();
-      case d.FUNCTION:
+      case f.FUNCTION:
         return this.parseFunctionExpr();
-      case d.FOR:
+      case f.FOR:
         return this.parseLoopExpr();
-      case d.CONTINUE:
-      case d.BREAK:
+      case f.CONTINUE:
+      case f.BREAK:
         return this.parseLoopControlExpr();
       default:
         return this.parseDefinitionExpr();
@@ -1394,7 +1394,7 @@ class R {
   }
   static setPathTypeIfNotJSON(t, e) {
     const r = t;
-    return t.inferredPathType !== f.JSON && (r.inferredPathType = e), r;
+    return t.inferredPathType !== d.JSON && (r.inferredPathType = e), r;
   }
   updatePathExpr(t) {
     var o, c;
@@ -1404,7 +1404,7 @@ class R {
     let s = N(e.parts), a;
     (s == null ? void 0 : s.type) === n.FUNCTION_CALL_EXPR && (a = e.parts.pop()), s = N(e.parts), (s == null ? void 0 : s.type) === n.PATH_OPTIONS && ((o = s.options) != null && o.toArray) && (e.returnAsArray = (c = s.options) == null ? void 0 : c.toArray, !s.options.item && !s.options.index ? e.parts.pop() : s.options.toArray = !1), e.parts = R.combinePathOptionParts(e.parts);
     let h = e;
-    return a && (h = R.convertToFunctionCallExpr(a, e)), r ? (h = R.convertToBlockExpr(h), R.setPathTypeIfNotJSON(e, f.RICH)) : R.isRichPath(e) && R.setPathTypeIfNotJSON(e, f.RICH), h;
+    return a && (h = R.convertToFunctionCallExpr(a, e)), r ? (h = R.convertToBlockExpr(h), R.setPathTypeIfNotJSON(e, d.RICH)) : R.isRichPath(e) && R.setPathTypeIfNotJSON(e, d.RICH), h;
   }
   static parseBaseExprFromTemplate(t) {
     const e = new y(t);
@@ -1447,15 +1447,15 @@ function H(i, t, e = []) {
   return {
     type: n.PATH,
     root: t,
-    pathType: i.pathType || f.UNKNOWN,
-    inferredPathType: i.inferredPathType || f.UNKNOWN,
+    pathType: i.pathType || d.UNKNOWN,
+    inferredPathType: i.inferredPathType || d.UNKNOWN,
     parts: e,
     returnAsArray: !0
   };
 }
 function ht(i, t) {
   if (!(i != null && i.props) || i.type !== n.OBJECT_EXPR || !Array.isArray(i.props))
-    throw new _(
+    throw new $(
       "Invalid mapping: invalid array mapping",
       t.input,
       t.output
@@ -1519,10 +1519,10 @@ function q(i) {
   var t;
   return i.type === n.SELECTOR && ((t = i.prop) == null ? void 0 : t.value) === "*";
 }
-function dt(i, t, e = !1) {
+function ft(i, t, e = !1) {
   const r = i.inputExpr, s = r.parts.findIndex(q);
   if (s === -1)
-    throw new _(
+    throw new $(
       "Invalid mapping: input should have wildcard selector",
       i.input,
       i.output
@@ -1556,7 +1556,7 @@ function dt(i, t, e = !1) {
     contextVar: "e"
   }), c;
 }
-function ft(i, t, e) {
+function dt(i, t, e) {
   var s, a, h, o, c, E;
   const r = i.outputExpr.parts[t];
   if (((s = r.filter) == null ? void 0 : s.type) === n.ALL_FILTER_EXPR) {
@@ -1583,7 +1583,7 @@ function ft(i, t, e) {
       t === i.outputExpr.parts.length - 1
     );
   if (q(r))
-    return dt(
+    return ft(
       i,
       e,
       t === i.outputExpr.parts.length - 1
@@ -1592,7 +1592,7 @@ function ft(i, t, e) {
 function G(i, t, e) {
   let r = e.value, s = t;
   for (; s < i.outputExpr.parts.length; ) {
-    const a = ft(i, s, e);
+    const a = dt(i, s, e);
     if (!a)
       break;
     s++, r = a;
@@ -1639,7 +1639,7 @@ function mt(i, t) {
 }
 function yt(i, t) {
   if (i.inputExpr.type !== n.PATH)
-    throw new _(
+    throw new $(
       "Invalid mapping: input should be path expression",
       i.input,
       i.output
@@ -1650,7 +1650,7 @@ function yt(i, t) {
       return (r == null ? void 0 : r.type) === n.OBJECT_FILTER_EXPR && ((s = r.options) == null ? void 0 : s.index) === t;
     }
   ))
-    throw new _(
+    throw new $(
       `Invalid mapping: index variable:${t} not found in input path`,
       i.input,
       i.output
@@ -1659,7 +1659,7 @@ function yt(i, t) {
 function At(i) {
   var e;
   if (i.outputExpr.type !== n.PATH)
-    throw new _(
+    throw new $(
       "Invalid mapping: output should be a path expression",
       i.input,
       i.output
@@ -1700,7 +1700,7 @@ class Ct {
   translate(t) {
     var r;
     let e = this.translateExpression(t);
-    return e = e.replace(/\.\s+\./g, "."), ((r = this.options) == null ? void 0 : r.defaultPathType) === f.JSON && (e = e.replace(/\^/g, "$")), e;
+    return e = e.replace(/\.\s+\./g, "."), ((r = this.options) == null ? void 0 : r.defaultPathType) === d.JSON && (e = e.replace(/\^/g, "$")), e;
   }
   translateExpression(t) {
     switch (t.type) {
@@ -1790,7 +1790,7 @@ class Ct {
   }
   translateObjectFilterExpression(t) {
     var e;
-    return t.filter.type === n.ALL_FILTER_EXPR ? "[*]" : ((e = this.options) == null ? void 0 : e.defaultPathType) === f.JSON ? this.translateWithWrapper(t.filter, "[?(", ")]") : this.translateWithWrapper(t.filter, "{", "}");
+    return t.filter.type === n.ALL_FILTER_EXPR ? "[*]" : ((e = this.options) == null ? void 0 : e.defaultPathType) === d.JSON ? this.translateWithWrapper(t.filter, "[?(", ")]") : this.translateWithWrapper(t.filter, "{", "}");
   }
   translateLambdaArgExpression(t) {
     return `?${t.index}`;
@@ -1826,7 +1826,7 @@ class Ct {
   }
   translateFunctionCallExpression(t) {
     const e = [];
-    return t.object ? (e.push(this.translateExpression(t.object)), t.id && e.push(`.${t.id}`)) : t.parent ? (e.push(this.translatePathRootString(t.parent, f.SIMPLE)), t.id && e.push(`.${t.id}`)) : t.id && e.push(t.id.replace(O, "$")), e.push("("), t.args && e.push(this.translateExpressions(t.args, ", ")), e.push(")"), e.join("");
+    return t.object ? (e.push(this.translateExpression(t.object)), t.id && e.push(`.${t.id}`)) : t.parent ? (e.push(this.translatePathRootString(t.parent, d.SIMPLE)), t.id && e.push(`.${t.id}`)) : t.id && e.push(t.id.replace(O, "$")), e.push("("), t.args && e.push(this.translateExpressions(t.args, ", ")), e.push(")"), e.join("");
   }
   translateAssignmentExpression(t) {
     const e = [];
@@ -1845,18 +1845,18 @@ class Ct {
   }
   translatePathType(t) {
     switch (t) {
-      case f.JSON:
+      case d.JSON:
         return "~j ";
-      case f.RICH:
+      case d.RICH:
         return "~r ";
-      case f.SIMPLE:
+      case d.SIMPLE:
         return "~s ";
       default:
         return "";
     }
   }
   translatePathRootString(t, e) {
-    return t === O ? "$" : t === I ? e === f.JSON ? "$" : "^" : t;
+    return t === O ? "$" : t === I ? e === d.JSON ? "$" : "^" : t;
   }
   translatePathRoot(t, e) {
     if (typeof t.root == "string")
@@ -1865,7 +1865,7 @@ class Ct {
       const r = [];
       return r.push(this.translateExpression(t.root)), t.root.type === n.PATH && r.push(".(). "), r.join("");
     }
-    return e === f.JSON ? "@. " : ". ";
+    return e === d.JSON ? "@. " : ". ";
   }
   translatePathOptions(t) {
     if (!t)
@@ -1949,7 +1949,7 @@ function B(i, t) {
   const e = [];
   return e.push(`(typeof ${i} === 'string' && typeof ${t} === 'string') ?`), e.push(`(${i}.toLowerCase().includes(${t}.toLowerCase()))`), e.push(":"), e.push(`(Array.isArray(${i}) && (${i}.includes(${t})`), e.push(`|| (typeof ${t} === 'string' && ${i}.includes(${t}.toLowerCase()))))`), e.join("");
 }
-const _t = {
+const $t = {
   "===": (i, t) => `${i}===${t}`,
   "==": (i, t) => {
     const e = [];
@@ -2059,7 +2059,7 @@ const Q = {
    }`,
   keys: `function ${A}keys(obj) { return Object.keys(obj); }`
 };
-function $t(i) {
+function _t(i) {
   return Object.prototype.hasOwnProperty.call(Q, i);
 }
 class u {
@@ -2089,7 +2089,11 @@ class u {
   translate(t = tt, e = I) {
     this.init();
     const r = [], s = this.translateExpr(this.expr, t, e), a = Object.values(this.standardFunctions);
-    return a.length > 0 && r.push(a.join("").replace(/\s+/g, " ")), r.push(`let ${t};`), r.push(this.vars.map((h) => `let ${h};`).join("")), r.push(s), r.push(`return ${t};`), r.join("");
+    return a.length > 0 && r.push(a.join("").replace(/\s+/g, " ")), r.push(`let ${t};`), r.push(this.vars.map((h) => `let ${h};`).join("")), r.push(s), r.push(`
+      if (!Array.isArray(${t})) {
+        ${t} = [${t}];
+      }
+    `), r.push(`return ${t};`), r.join("");
   }
   translateExpr(t, e, r) {
     switch (t.type) {
@@ -2204,8 +2208,8 @@ class u {
     const { parts: r } = t, s = [], a = r.length, h = this.acquireVars(a), o = this.acquireVars(a), c = this.acquireVars(a), E = this.acquireVar();
     s.push(u.generateAssignmentCode(E, "[]")), s.push(u.generateAssignmentCode(h[0], e));
     for (let P = 0; P < a; P++) {
-      const Z = r[P], $ = o[P], C = c[P], F = h[P];
-      s.push(this.prepareDataForPathPart(t, P, F)), s.push(`for(${$}=0; ${$}<${F}.length; ${$}++) {`), s.push(`${C} = ${F}[${$}];`), s.push(this.translatePathContextVariables(t, P, C, $)), s.push(this.translateExpr(Z, C, C)), s.push(`if(${u.returnIsEmpty(C)}) { continue; }`), P < a - 1 ? s.push(u.generateAssignmentCode(h[P + 1], C)) : s.push(`${E}.push(${C});`);
+      const Z = r[P], _ = o[P], C = c[P], F = h[P];
+      s.push(this.prepareDataForPathPart(t, P, F)), s.push(`for(${_}=0; ${_}<${F}.length; ${_}++) {`), s.push(`${C} = ${F}[${_}];`), s.push(this.translatePathContextVariables(t, P, C, _)), s.push(this.translateExpr(Z, C, C)), s.push(`if(${u.returnIsEmpty(C)}) { continue; }`), P < a - 1 ? s.push(u.generateAssignmentCode(h[P + 1], C)) : s.push(`${E}.push(${C});`);
     }
     for (let P = 0; P < a; P++)
       s.push("}");
@@ -2219,7 +2223,7 @@ class u {
     return s.push(u.generateAssignmentCode(e, h)), t.returnAsArray && s.push(u.covertToArrayValue(e)), s.join("");
   }
   translatePathExpr(t, e, r) {
-    if (t.inferredPathType === f.SIMPLE)
+    if (t.inferredPathType === d.SIMPLE)
       return this.translateSimplePathExpr(t, e, r);
     const s = [];
     return s.push(this.translatePathRoot(t, e, r)), t.parts.length > 0 ? s.push(this.translatePathParts(t, e)) : t.returnAsArray && s.push(u.covertToArrayValue(e)), s.join("");
@@ -2270,7 +2274,7 @@ class u {
     const s = [], a = this.acquireVar();
     s.push(u.generateAssignmentCode(a, r)), t.object && (s.push(this.translateExpr(t.object, a, r)), s.push(`if(${u.returnIsNotEmpty(a)}){`));
     const h = this.translateSpreadableExpressions(t.args, a, s), o = this.getFunctionName(t, a);
-    return t.id && $t(t.id) ? (this.standardFunctions[t.id] = Q[t.id], s.push(`if(${o} && typeof ${o} === 'function'){`), s.push(a, "=", o, "(", h, ");"), s.push("} else {"), s.push(
+    return t.id && _t(t.id) ? (this.standardFunctions[t.id] = Q[t.id], s.push(`if(${o} && typeof ${o} === 'function'){`), s.push(a, "=", o, "(", h, ");"), s.push("} else {"), s.push(
       a,
       "=",
       A,
@@ -2444,7 +2448,7 @@ class u {
   }
   translateBinaryExpr(t, e, r) {
     const s = this.acquireVar(), a = this.acquireVar(), { args: h } = t, o = [];
-    return o.push(this.translateExpr(h[0], s, r)), o.push(this.translateExpr(h[1], a, r)), o.push(e, "=", _t[t.op](s, a), ";"), this.releaseVars(s, a), o.join("");
+    return o.push(this.translateExpr(h[0], s, r)), o.push(this.translateExpr(h[1], a, r)), o.push(e, "=", $t[t.op](s, a), ";"), this.releaseVars(s, a), o.join("");
   }
   static ValidateAssignmentPath(t) {
     if (t.startsWith(O) && !t.startsWith(J))
@@ -2504,7 +2508,7 @@ class x {
   static isValidJSONPath(t = "") {
     var e;
     try {
-      const s = (e = x.parse(t, { defaultPathType: f.JSON }).statements) == null ? void 0 : e[0];
+      const s = (e = x.parse(t, { defaultPathType: d.JSON }).statements) == null ? void 0 : e[0];
       return s && s.type === n.PATH && (!s.root || s.root === I);
     } catch {
       return !1;
@@ -2520,7 +2524,7 @@ class x {
   static validateMappings(t, e) {
     x.prepareMappings(t).forEach((r) => {
       if (!x.isValidJSONPath(r.input) || !x.isValidJSONPath(r.output))
-        throw new _(
+        throw new $(
           "Invalid mapping: invalid JSON path",
           r.input,
           r.output
@@ -2594,21 +2598,21 @@ export {
   m as JsonTemplateParserError,
   u as JsonTemplateTranslator,
   gt as JsonTemplateTranslatorError,
-  d as Keyword,
+  f as Keyword,
   l as OperatorType,
-  f as PathType,
+  d as PathType,
   tt as RESULT_KEY,
   n as SyntaxType,
   p as TokenType,
   A as VARS_PREFIX,
-  _t as binaryOperators,
+  $t as binaryOperators,
   Ot as convertToObjectMapping,
   S as convertToStatementsExpr,
   v as createBlockExpression,
   g as escapeStr,
   N as getLastElement,
   it as isExpression,
-  $t as isStandardFunction,
+  _t as isStandardFunction,
   Q as standardFunctions,
   b as toArray
 };

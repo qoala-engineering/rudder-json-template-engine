@@ -52,6 +52,11 @@ class JsonTemplateTranslator {
         code.push(`let ${dest};`);
         code.push(this.vars.map((elm) => `let ${elm};`).join(''));
         code.push(exprCode);
+        code.push(`
+      if (!Array.isArray(${dest})) {
+        ${dest} = [${dest}];
+      }
+    `);
         code.push(`return ${dest};`);
         return code.join('');
     }
