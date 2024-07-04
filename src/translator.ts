@@ -101,11 +101,15 @@ export class JsonTemplateTranslator {
     code.push(`let ${dest};`);
     code.push(this.vars.map((elm) => `let ${elm};`).join(''));
     code.push(exprCode);
-    code.push(`
-      if (!Array.isArray(${dest})) {
-        ${dest} = [${dest}];
-      }
-    `);
+    if (
+      this.expr.type === SyntaxType.PATH &&
+      this.expr.parts &&
+      this.expr.parts[0].type === SyntaxType.SELECTOR &&
+      this.expr.parts[0].selector === '.'
+    ) {
+      code.push(` if (!Array.isArray(${dest})) { ${dest} = [${dest}]; } `);
+    }
+
     code.push(`return ${dest};`);
 
     return code.join('');

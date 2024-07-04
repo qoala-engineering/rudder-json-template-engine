@@ -13,7 +13,7 @@ const L = {
   UNKNOWN_TOKEN: "Unknown token",
   UNEXP_EOT: "Unexpected end of template"
 };
-class y {
+class m {
   constructor(t) {
     this.idx = 0, this.buf = [], this.codeChars = t.split("");
   }
@@ -39,7 +39,7 @@ class y {
     return this.match("=") || this.match("+=") || this.match("-=") || this.match("*=") || this.match("/=");
   }
   matchLiteral() {
-    return y.isLiteralToken(this.lookahead());
+    return m.isLiteralToken(this.lookahead());
   }
   matchINT(t = 0) {
     return this.matchTokenType(p.INT, t);
@@ -212,7 +212,7 @@ class y {
     const t = this.scanRegularExpressions() ?? this.scanPunctuator() ?? this.scanID() ?? this.scanString() ?? this.scanInteger();
     if (t)
       return t;
-    y.throwError(L.UNKNOWN_TOKEN);
+    m.throwError(L.UNKNOWN_TOKEN);
   }
   value() {
     return this.lex().value;
@@ -234,7 +234,7 @@ class y {
   }
   throwUnexpectedToken(t) {
     const e = t ?? this.lookahead();
-    e.type === p.EOT && y.throwError(L.UNEXP_EOT), y.throwError(L.UNEXP_TOKEN, e.value);
+    e.type === p.EOT && m.throwError(L.UNEXP_EOT), m.throwError(L.UNEXP_TOKEN, e.value);
   }
   static throwError(t, ...e) {
     const r = t.replace(/%(\d)/g, (s, a) => e[a]);
@@ -250,17 +250,17 @@ class y {
     return this.isIdStart(t) || t >= "0" && t <= "9";
   }
   static validateID(t) {
-    t.startsWith(A) && y.throwError(L.RESERVED_ID, t);
+    t.startsWith(A) && m.throwError(L.RESERVED_ID, t);
   }
   scanID() {
     let t = this.codeChars[this.idx];
-    if (!y.isIdStart(t))
+    if (!m.isIdStart(t))
       return;
     const e = this.idx;
     let r = t;
-    for (; ++this.idx < this.codeChars.length && (t = this.codeChars[this.idx], !!y.isIdPart(t)); )
+    for (; ++this.idx < this.codeChars.length && (t = this.codeChars[this.idx], !!m.isIdPart(t)); )
       r += t;
-    if (y.isOperator(r))
+    if (m.isOperator(r))
       return {
         type: p.KEYWORD,
         value: r,
@@ -287,7 +287,7 @@ class y {
           range: [e, this.idx]
         };
       default:
-        return y.validateID(r), {
+        return m.validateID(r), {
           type: p.ID,
           value: r,
           range: [e, this.idx]
@@ -319,10 +319,10 @@ class y {
   scanInteger() {
     const t = this.idx;
     let e = this.codeChars[this.idx];
-    if (!y.isDigit(e))
+    if (!m.isDigit(e))
       return;
     let r = e;
-    for (; ++this.idx < this.codeChars.length && (e = this.codeChars[this.idx], !!y.isDigit(e)); )
+    for (; ++this.idx < this.codeChars.length && (e = this.codeChars[this.idx], !!m.isDigit(e)); )
       r += e;
     return {
       type: p.INT,
@@ -412,7 +412,7 @@ class y {
   }
   scanPunctuatorForQuestionMarks() {
     const t = this.idx, e = this.codeChars[this.idx], r = this.codeChars[this.idx + 1];
-    if (e === "?" && y.isDigit(r))
+    if (e === "?" && m.isDigit(r))
       return this.idx += 2, {
         type: p.LAMBDA_ARG,
         value: Number(r),
@@ -465,7 +465,7 @@ class y {
       if (r < this.codeChars.length) {
         this.idx = r + 1;
         const s = this.getCode(t + 1, r), a = this.getRegExpModifiers();
-        return y.isValidRegExp(s, a) || y.throwError("invalid regular expression '%0'", s), {
+        return m.isValidRegExp(s, a) || m.throwError("invalid regular expression '%0'", s), {
           type: p.REGEXP,
           value: this.getCode(t, this.idx),
           range: [t, this.idx]
@@ -477,7 +477,7 @@ class y {
     return this.scanPunctuatorForDots() ?? this.scanPunctuatorForQuestionMarks() ?? this.scanPunctuatorForArithmeticAssignment() ?? this.scanPunctuatorForEquality() ?? this.scanPunctuatorForPaths() ?? this.scanPunctuatorForRepeatedTokens("?", 3) ?? this.scanPunctuatorForRepeatedTokens("|&*.=>?<+-", 2) ?? this.scanSingleCharPunctuators();
   }
 }
-class m extends Error {
+class y extends Error {
 }
 function b(i) {
   if (i != null)
@@ -536,7 +536,7 @@ class R {
   static validateStatements(t, e) {
     if (!t.length) {
       if ((e == null ? void 0 : e.parentType) === n.CONDITIONAL_EXPR || (e == null ? void 0 : e.parentType) === n.LOOP_EXPR)
-        throw new m(
+        throw new y(
           "Empty statements are not allowed in loop and condtional expressions"
         );
       return;
@@ -544,7 +544,7 @@ class R {
     for (let r = 0; r < t.length; r += 1) {
       const s = t[r];
       if ((s.type === n.RETURN_EXPR || s.type === n.THROW_EXPR || s.type === n.LOOP_CONTROL_EXPR) && ((e == null ? void 0 : e.parentType) !== n.CONDITIONAL_EXPR || r !== t.length - 1))
-        throw new m(
+        throw new y(
           "return, throw, continue and break statements are only allowed as last statements in conditional expressions"
         );
     }
@@ -564,9 +564,9 @@ class R {
     if (t.type === n.PATH && this.lexer.matchAssignment()) {
       const e = this.lexer.value(), r = t;
       if (!r.root || typeof r.root == "object" || r.root === I)
-        throw new m("Invalid assignment path");
+        throw new y("Invalid assignment path");
       if (!R.isSimplePath(t))
-        throw new m("Invalid assignment path");
+        throw new y("Invalid assignment path");
       return r.inferredPathType = d.SIMPLE, {
         type: n.ASSIGNMENT_EXPR,
         value: this.parseBaseExpr(),
@@ -582,7 +582,7 @@ class R {
       return this.parseNextExpr(l.BASE);
     } catch (e) {
       const r = this.lexer.getCode(t, this.lexer.currentIndex());
-      throw e.message.includes("at") ? e : new m(`${e.message} at ${r}`);
+      throw e.message.includes("at") ? e : new y(`${e.message} at ${r}`);
     }
   }
   parseNextExpr(t) {
@@ -800,7 +800,7 @@ class R {
   parseLoopControlExpr() {
     const t = this.lexer.value();
     if (!this.loopCount)
-      throw new m(`encounted loop control outside loop: ${t}`);
+      throw new y(`encounted loop control outside loop: ${t}`);
     return {
       type: n.LOOP_CONTROL_EXPR,
       control: t
@@ -875,7 +875,7 @@ class R {
   }
   combineExpressionsAsBinaryExpr(t, e, r) {
     if (!(t != null && t.length))
-      throw new m("expected at least 1 expression");
+      throw new y("expected at least 1 expression");
     return t.length === 1 ? t[0] : {
       type: e,
       op: r,
@@ -986,7 +986,7 @@ class R {
     if (this.lexer.matchIncrement() || this.lexer.matchDecrement()) {
       const t = this.lexer.value();
       if (!this.lexer.matchID())
-        throw new m("Invalid prefix increment expression");
+        throw new y("Invalid prefix increment expression");
       const e = this.lexer.value();
       return {
         type: n.INCREMENT,
@@ -1000,10 +1000,10 @@ class R {
     if (t.type === n.PATH) {
       const e = t;
       if (!e.root || typeof e.root != "string" || e.parts.length !== 0 || e.root === I || e.root === O)
-        throw new m("Invalid postfix increment expression");
+        throw new y("Invalid postfix increment expression");
       return e.root;
     }
-    throw new m("Invalid postfix increment expression");
+    throw new y("Invalid postfix increment expression");
   }
   parsePostfixIncreamentExpr() {
     const t = this.parseNextExpr(l.POSTFIX_INCREMENT);
@@ -1073,17 +1073,17 @@ class R {
     const t = [];
     for (this.lexer.expect("{"); !this.lexer.match("}"); ) {
       if (!this.lexer.matchID())
-        throw new m("Invalid object vars");
+        throw new y("Invalid object vars");
       t.push(this.lexer.value()), this.lexer.match("}") || this.lexer.expect(",");
     }
     if (this.lexer.expect("}"), t.length === 0)
-      throw new m("Empty object vars");
+      throw new y("Empty object vars");
     return t;
   }
   parseNormalDefVars() {
     const t = [];
     if (!this.lexer.matchID())
-      throw new m("Invalid normal vars");
+      throw new y("Invalid normal vars");
     return t.push(this.lexer.value()), t;
   }
   parseDefinitionExpr() {
@@ -1156,7 +1156,7 @@ class R {
   parseNormalObjectPropExpr() {
     const t = this.getObjectPropContextVar(), e = this.parseObjectKeyExpr();
     if (t && typeof e == "string")
-      throw new m("Context prop should be used with a key expression");
+      throw new y("Context prop should be used with a key expression");
     this.lexer.expect(":");
     const r = this.parseBaseExpr();
     return {
@@ -1201,7 +1201,7 @@ class R {
     this.lexer.expect("(");
     const t = this.parseStatements(")");
     if (this.lexer.expect(")"), t.length === 0)
-      throw new m("empty block is not allowed");
+      throw new y("empty block is not allowed");
     return {
       type: n.BLOCK_EXPR,
       statements: t
@@ -1305,7 +1305,7 @@ class R {
     const e = {};
     for (const r of t.props) {
       if (!R.isValidMapping(r))
-        throw new m(
+        throw new y(
           `Invalid mapping key=${JSON.stringify(r.key)} or value=${JSON.stringify(
             r.value
           )}, expected string key and string value`
@@ -1313,7 +1313,7 @@ class R {
       e[r.key] = r.value.value;
     }
     if (!e.input || !e.output)
-      throw new m(
+      throw new y(
         `Invalid mapping: ${JSON.stringify(e)}, missing input or output`
       );
     return e;
@@ -1323,7 +1323,7 @@ class R {
     const t = this.parseArrayExpr(), e = [];
     for (const r of t.elements) {
       if (r.type !== n.OBJECT_EXPR)
-        throw new m(
+        throw new y(
           `Invalid mapping=${JSON.stringify(r)}, expected object`
         );
       e.push(R.convertMappingsToFlatPaths(r));
@@ -1407,7 +1407,7 @@ class R {
     return a && (h = R.convertToFunctionCallExpr(a, e)), r ? (h = R.convertToBlockExpr(h), R.setPathTypeIfNotJSON(e, d.RICH)) : R.isRichPath(e) && R.setPathTypeIfNotJSON(e, d.RICH), h;
   }
   static parseBaseExprFromTemplate(t) {
-    const e = new y(t);
+    const e = new m(t);
     return new R(e).parseBaseExpr();
   }
 }
@@ -1628,7 +1628,7 @@ function Rt(i, t, e) {
   const a = nt(e, s);
   return G(i, t + 1, a).props;
 }
-function mt(i, t) {
+function yt(i, t) {
   t.props.push({
     type: n.OBJECT_PROP_EXPR,
     value: {
@@ -1637,7 +1637,7 @@ function mt(i, t) {
     }
   });
 }
-function yt(i, t) {
+function mt(i, t) {
   if (i.inputExpr.type !== n.PATH)
     throw new $(
       "Invalid mapping: input should be path expression",
@@ -1665,7 +1665,7 @@ function At(i) {
       i.output
     );
   const t = N(i.outputExpr.parts);
-  (e = t == null ? void 0 : t.options) != null && e.index && yt(i, t.options.index);
+  (e = t == null ? void 0 : t.options) != null && e.index && mt(i, t.options.index);
 }
 function It(i, t) {
   let e = t.props;
@@ -1689,7 +1689,7 @@ function Ot(i) {
       }
       It(r, s);
     } else
-      mt(r, t);
+      yt(r, t);
   }
   return e ?? t;
 }
@@ -2089,11 +2089,7 @@ class u {
   translate(t = tt, e = I) {
     this.init();
     const r = [], s = this.translateExpr(this.expr, t, e), a = Object.values(this.standardFunctions);
-    return a.length > 0 && r.push(a.join("").replace(/\s+/g, " ")), r.push(`let ${t};`), r.push(this.vars.map((h) => `let ${h};`).join("")), r.push(s), r.push(`
-      if (!Array.isArray(${t})) {
-        ${t} = [${t}];
-      }
-    `), r.push(`return ${t};`), r.join("");
+    return a.length > 0 && r.push(a.join("").replace(/\s+/g, " ")), r.push(`let ${t};`), r.push(this.vars.map((h) => `let ${h};`).join("")), r.push(s), this.expr.type === n.PATH && this.expr.parts && this.expr.parts[0].type === n.SELECTOR && this.expr.parts[0].selector === "." && r.push(` if (!Array.isArray(${t})) { ${t} = [${t}]; } `), r.push(`return ${t};`), r.join("");
   }
   translateExpr(t, e, r) {
     switch (t.type) {
@@ -2554,7 +2550,7 @@ class x {
     if (it(t))
       return t;
     if (typeof t == "string") {
-      const r = new y(t);
+      const r = new m(t);
       return new R(r, e).parse();
     }
     return x.parseMappingPaths(t, e);
@@ -2592,10 +2588,10 @@ export {
   et as FUNCTION_RESULT_KEY,
   rt as INDENTATION_SPACES,
   x as JsonTemplateEngine,
-  y as JsonTemplateLexer,
+  m as JsonTemplateLexer,
   M as JsonTemplateLexerError,
   R as JsonTemplateParser,
-  m as JsonTemplateParserError,
+  y as JsonTemplateParserError,
   u as JsonTemplateTranslator,
   gt as JsonTemplateTranslatorError,
   f as Keyword,
